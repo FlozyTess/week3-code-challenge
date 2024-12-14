@@ -1,1 +1,1 @@
-# Flat Dango
+# Flat Dango : Movie Ticket App
