@@ -4,15 +4,24 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    background-color:  #f3f3f3;
+    color: #333;
     margin: 0;
   }
   .container {
     display: flex;
     justify-content: space-between;
+    background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     width: 80%;
+    overflow: hidden;
   }
   .menu {
+    background-color: #8a2be2;
+    color: white;
+    padding: 20px;
+    overflow-y: auto;
     width: 20%;
   }
   .film-details {
