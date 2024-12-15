@@ -46,7 +46,12 @@ body {
     color: #ffccd5;
   }
   .film-details {
-    width: 70%;
+     width: 70%;
+     padding: 30px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
   }
   .film-item {
     padding: 10px;
