@@ -31,5 +31,17 @@ document.addEventListener('DOMContentLoaded', () => {
     runtimeElement.textContent = `Runtime: ${film.runtime} minutes`;
     showtimeElement.textContent = `Showtime: ${film.showtime}`;
     ticketsLeftElement.textContent = `Tickets Available: ${film.capacity - film.tickets_sold}`;
-    
+     // Update the button based on ticket availability
+     if (film.capacity - film.tickets_sold <= 0) {
+        buyTicketButton.textContent = 'Sold Out';
+        buyTicketButton.disabled = true;
+        filmList.querySelectorAll('li').forEach(item => {
+          if (item.textContent === film.title) {
+            item.classList.add('sold-out');
+          }
+        });
+      } else {
+        buyTicketButton.textContent = 'Buy Ticket';
+        buyTicketButton.disabled = false;
+      }
 });
