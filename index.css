@@ -57,4 +57,41 @@ body {
     padding: 10px;
     cursor: pointer;
     border-bottom: 1px solid blueviolet;
+
   }
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8a2be2; 
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: purple; 
+  }
+  
+  button:disabled {
+    background-color:hotpink;
+    cursor: not-allowed;
+  }
+  
+  footer {
+    background-color: #8a2be2;
+    color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  margin: 0;
+}
