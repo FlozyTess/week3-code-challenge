@@ -19,4 +19,17 @@ document.addEventListener('DOMContentLoaded', () => {
         li.addEventListener('click', () => displayFilmDetails(film));
         filmList.appendChild(li);
   });
-})
+  // Display the first movie's details
+  displayFilmDetails(films[0]);
+});
+
+  // Function to display movie details
+  function displayFilmDetails(film) {
+    titleElement.textContent = film.title;
+    posterElement.src = film.poster;
+    descriptionElement.textContent = film.description;
+    runtimeElement.textContent = `Runtime: ${film.runtime} minutes`;
+    showtimeElement.textContent = `Showtime: ${film.showtime}`;
+    ticketsLeftElement.textContent = `Tickets Available: ${film.capacity - film.tickets_sold}`;
+    
+});
