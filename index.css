@@ -12,3 +12,6 @@ body {
     justify-content: space-between;
     width: 80%;
   }
+  .menu {
+    width: 20%;
+  }
