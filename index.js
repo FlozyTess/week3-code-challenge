@@ -44,4 +44,12 @@ document.addEventListener('DOMContentLoaded', () => {
         buyTicketButton.textContent = 'Buy Ticket';
         buyTicketButton.disabled = false;
       }
-});
+      // Handle Buy Ticket
+    buyTicketButton.addEventListener('click', () => {
+        if (film.capacity - film.tickets_sold > 0) {
+          film.tickets_sold++;
+          ticketsLeftElement.textContent = `Tickets Available: ${film.capacity - film.tickets_sold}`;
+        }
+      });
+    }
+  });
