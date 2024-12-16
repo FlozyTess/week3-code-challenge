@@ -28,3 +28,13 @@ Follow these steps to set up the project locally:
 
 ```bash
 git clone https://github.com/your-username/film-ticket-booking-app.git
+```
+### 2. Navigate to the project directory:
+```bash
+cd film-ticket-booking-app
+```
+### 3. Install dependencies:
+You will need to install JSON Server globally to run the mock API:
+```bash
+npm install -g json-server
+```
