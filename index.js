@@ -21,6 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
         li.classList.add('film-item');
         li.addEventListener('click', () => displayFilmDetails(film));
         filmList.appendChild(li);
+        //mark movie as sold out
+        if (film.capacity - film.tickets_sold <= 0) {
+            li.classList.add('sold-out');
+          }
   });
   // Display the first movie's details
   displayFilmDetails(films[0]);
@@ -33,26 +37,33 @@ document.addEventListener('DOMContentLoaded', () => {
     descriptionElement.textContent = film.description;
     runtimeElement.textContent = `Runtime: ${film.runtime} minutes`;
     showtimeElement.textContent = `Showtime: ${film.showtime}`;
-    ticketsLeftElement.textContent = `Tickets Available: ${film.capacity - film.tickets_sold}`;
+    ticketsLeftElement.textContent =
+    film.capacity - film.tickets_sold > 0
+     ? `Tickets Available: ${film.capacity - film.tickets_sold}`
+            :'Tickets Available: Sold Out';
+
      // Update the button based on ticket availability
-     if (film.capacity - film.tickets_sold <= 0) {
-        buyTicketButton.textContent = 'Sold Out';
-        buyTicketButton.disabled = true;
-        filmList.querySelectorAll('li').forEach(item => {
-          if (item.textContent === film.title) {
-            item.classList.add('sold-out');
-          }
-        });
-      } else {
-        buyTicketButton.textContent = 'Buy Ticket';
-        buyTicketButton.disabled = false;
-      }
-      // Handle Buy Ticket
-    buyTicketButton.addEventListener('click', () => {
-        if (film.capacity - film.tickets_sold > 0) {
-          film.tickets_sold++;
-          ticketsLeftElement.textContent = `Tickets Available: ${film.capacity - film.tickets_sold}`;
-        }
-      });
+     const newBuyTicketHandler = () => handleBuyTicket(film);
+     buyTicketButton.replaceWith(buyTicketButton.cloneNode(true));
+     const updatedButton = document.getElementById('buy-ticket');
+     updatedButton.addEventListener('click', newBuyTicketHandler);
+     // Handle tickets and update sold-out state
+function handleBuyTicket(film) {
+    if (film.capacity - film.tickets_sold > 0) {
+        film.tickets_sold++;
+        ticketsLeftElement.textContent = `Tickets Available: ${film.capacity - film.tickets_sold}`;
+
+        // If no tickets left, mark as sold-out
+        if (film.capacity - film.tickets_sold <= 0) {
+            buyTicketButton.textContent = 'Sold Out';
+            buyTicketButton.disabled = true;
+             // Update film item in the list
+             const filmItem = Array.from(filmList.children).find(item => item.textContent === film.title);
+             if (filmItem) {
+                 filmItem.classList.add('sold-out');
+             }
+         }
+     }
+ }
     }
   });
