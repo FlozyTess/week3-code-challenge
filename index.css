@@ -33,6 +33,12 @@ body {
     list-style: none;
     padding: 0;
   }
+  #poster {
+    width: 300px;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+  }
   .film-item {
     cursor: pointer;
     padding: 10px;

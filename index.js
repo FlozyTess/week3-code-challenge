@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const showtimeElement = document.getElementById('showtime');
     const ticketsLeftElement = document.getElementById('tickets-left');
     const buyTicketButton = document.getElementById('buy-ticket');
+    // Remove placeholder list item
+  document.querySelector('#films .placeholder')?.remove();
+
     // Fetch all films
   fetch('http://localhost:3000/films')
   .then(response => response.json())
