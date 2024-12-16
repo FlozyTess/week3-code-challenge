@@ -16,3 +16,15 @@ A simple movie ticketing application that displays a list of films, their detail
 ## Prerequisites
 
 Ensure the following are installed before running the application,
+
+- **Node.js**: [Download and Install Node.js](https://nodejs.org/)
+- **JSON Server**: [Installation Guide](https://github.com/typicode/json-server)
+
+## Installation
+
+Follow these steps to set up the project locally:
+
+### 1. Clone the repository:
+
+```bash
+git clone https://github.com/your-username/film-ticket-booking-app.git
