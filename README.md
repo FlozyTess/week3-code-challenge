@@ -39,4 +39,21 @@ You will need to install JSON Server globally to run the mock API:
 npm install -g json-server
 ```
 ### 4. Set up JSON Server:
-You can either create your own ``` db.json``` file or use the one provided in the repository. The ```db.json ```file contains mock data about films, including titles, posters, descriptions, showtimes, capacities, and tickets sold.
+You can either create your own ``` db.json``` file or use the one provided in the repository.
+The ```db.json ```file contains mock data about films, including titles, posters, descriptions, showtimes,
+capacities, and tickets sold.
+
+### 5. Start the mock server:
+Run the following command to start the JSON Server on ``` localhost:3000```:
+``` bash
+json-server --watch db.json --port 3000
+```
+### 6. Open the project in your browser:
+Once the server is running, open the ``` index.html ```file in your browser to view the app. 
+The app will fetch the list of films from the mock API and display the details.
+
+## Contributions
+ Feel free to fork the repository.Contributions are always welcome!
+
+## License
+This project is licensed under the MIT License 
