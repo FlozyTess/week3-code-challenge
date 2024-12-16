@@ -38,3 +38,5 @@ You will need to install JSON Server globally to run the mock API:
 ```bash
 npm install -g json-server
 ```
+### 4. Set up JSON Server:
+You can either create your own ``` db.json``` file or use the one provided in the repository. The ```db.json ```file contains mock data about films, including titles, posters, descriptions, showtimes, capacities, and tickets sold.
