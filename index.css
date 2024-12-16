@@ -1,115 +1,56 @@
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
     background-color:  #f3f3f3;
     color: #333;
     margin: 0;
+    padding: 0;
   }
-  .container {
+  header, footer{
+    text-align: center;
+    background-color: #8a2be2;
+    color: white;
+    padding: 7px 0;
+  }
+  #container {
     display: flex;
-    flex: 1;
-    justify-content: space-between;
-    background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     width: 80%;
-    overflow: hidden;
+    margin: 20px auto;
   }
-  .menu {
+  #film-menu {
     background-color: #8a2be2;
     color: white;
     padding: 20px;
-    overflow-y: auto;
-    width: 20%;
   }
-  .menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .menu .film-item {
-    padding: 15px 10px;
-    cursor: pointer;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    transition: background-color 0.3s ease;
-  }
-  
-  .menu .film-item:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  
-  .menu .film-item.sold-out {
-    text-decoration: line-through;
-    color: #ffccd5;
-  }
-  .film-details {
+  #film-details {
      width: 70%;
-     padding: 30px;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
+     padding: 20px;
      text-align: center;
   }
-  .film-details img {
-    max-width: 300px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  .film-item {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid white;
   }
   
-  .film-details h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    color: #8a2be2;
-  }
-
-  .film-details p {
-    font-size: 1rem;
-    margin: 5px 0;
-  }
-  
-  .film-details #tickets {
-    font-weight: bold;
-    margin-top: 10px;
+  .film-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
   }
   button {
     padding: 10px 20px;
-    font-size: 1rem;
-    margin-top: 10px 0;
     border: none;
     border-radius: 5px;
     background-color: #8a2be2; 
     color: white;
     cursor: pointer;
-    display: inline-block;
-    transition: background-color 0.3s ease;
   }
-  
   button:hover {
     background-color: purple; 
   }
   
-  button:disabled {
-    background-color:hotpink;
-    cursor: not-allowed;
-  }
-  
-  footer {
-    background-color: #8a2be2;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    font-size: 0.9rem;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
-
-footer p {
-  margin: 0;
-}
